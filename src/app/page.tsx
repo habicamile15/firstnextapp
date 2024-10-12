@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+
 import Link from "next/link";
 import connectdb from "./helpers/connection";
 

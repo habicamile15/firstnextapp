@@ -12,7 +12,7 @@ if(!conn_url) throw new Error("No url connection");
 
     return connection;
 } catch (error) {
-    
+    console.log(error);
     throw new Error("Not connected to the Database");
 }
     

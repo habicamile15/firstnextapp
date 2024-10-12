@@ -6,14 +6,14 @@ export default async function user({params}:{params:{userid:string}}){
         const connection=await connectdb()
     const db=await connection.db()
     
-    const user:any=await db.collection('classes').findOne({_id:userid});
+    const user=await db.collection('classes').findOne({_id:userid});
     
 return(
 <div className="">
 
 
 <p>
-    {user.FirstName+" "}{user.lastName}
+    {user?.FirstName+" "}{user?.lastName}
   </p>
 
 </div>
