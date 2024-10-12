@@ -23,7 +23,7 @@ const users=await db.collection('classes').find().toArray();
 
 {users.map(user=>(
 
-<Link href={`/users/${user._id}`} className="w-52 shadow bg-slate-50 h-40">
+<Link key={user._id.toString()}href={`/users/${user._id}`} className="w-52 shadow bg-slate-50 h-40">
   <p>
     {user.FirstName+" "}{user.lastName}
   </p>
